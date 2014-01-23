@@ -9,6 +9,14 @@ var PlayerView = Backbone.View.extend({
     this.$el.on('ended', this.model.ended.bind(this.model));
   },
 
+  events: {
+    'ended': 'sendEndToModel'
+  },
+
+  sendEndToModel : function(){
+    this.model.ended();
+  },
+
   setSong: function(song){
     this.model = song;
     this.render();

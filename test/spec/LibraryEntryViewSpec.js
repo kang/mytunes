@@ -7,7 +7,7 @@ describe('LibraryEntryView', function() {
       title: 'Never Gonna Mock You Up',
       url: 'example/url',
     });
-    // spyOn(SongModel.prototype, 'enqueue'); // Uncomment this when working on the second test
+    spyOn(SongModel.prototype, 'enqueue'); // Uncomment this when working on the second test
     spyOn(SongModel.prototype, 'play');
     view = new LibraryEntryView({model: model});
     view.render();
